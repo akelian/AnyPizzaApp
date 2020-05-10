@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AnyPizzaApp</string>
+    <string name="title_menu">Меню</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_about">О нас</string>
+    <string name="title_cart">Корзина</string>
+    <string name="pizzas">Пиццы</string>
+    <string name="snacks">Закуски</string>
+    <string name="drinks">Напитки</string>
+    <string name="desserts">Десерты</string>
+    <string name="item_image">Item Image</string>
+</resources>

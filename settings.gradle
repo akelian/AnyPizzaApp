@@ -1,0 +1,2 @@
+rootProject.name='AnyPizzaApp'
+include ':app'

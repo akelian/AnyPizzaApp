@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:id="@+id/withDescriptionItemImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/item_image" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/withDescriptionItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/withDescriptionItemImage"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/withDescriptionItemImage"
+        android:textSize="24sp"
+        tool:text="menu item name" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/withDescriptionItemDescription"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/withDescriptionItemName"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/withDescriptionItemImage"
+        android:textSize="16sp"
+        tool:text="Description" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/withDescriptionItemPrice"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:textSize="20sp"
+        tool:text="price " />
+
+</RelativeLayout>

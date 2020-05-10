@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+    <ImageView
+        android:id="@+id/withoutDescriptionItemImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/item_image" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/withoutDescriptionItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/withoutDescriptionItemImage"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/withoutDescriptionItemImage"
+        android:textSize="24sp"
+        tool:text="menu item name" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/withoutDescriptionItemPrice"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/withoutDescriptionItemImage"
+        android:layout_below="@id/withoutDescriptionItemName"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        tool:text="price " />
+
+</RelativeLayout>
