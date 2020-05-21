@@ -9,4 +9,12 @@
     <string name="drinks">Напитки</string>
     <string name="desserts">Десерты</string>
     <string name="item_image">Item Image</string>
+    <string name="password">Password</string>
+    <string name="enter">Войти</string>
+    <string name="register">Регистрация</string>
+    <string name="signedOut">Вход не выполнен</string>
+    <string name="email">Email</string>
+    <string name="verifyEmail">Подтвердите email</string>
+    <string name="reload">reload</string>
+    <string name="Authorisation">Авторизация</string>
 </resources>

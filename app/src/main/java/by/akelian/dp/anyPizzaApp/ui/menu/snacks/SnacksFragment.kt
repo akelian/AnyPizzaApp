@@ -1,4 +1,4 @@
-package by.akelian.dp.anyPizzaApp.ui.menu.pizzas
+package by.akelian.dp.anyPizzaApp.ui.menu.snacks
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,15 +8,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.akelian.dp.anyPizzaApp.R
 import by.akelian.dp.anyPizzaApp.data.foodData.SimilarFoodData
-import by.akelian.dp.anyPizzaApp.retrofit.pizza.PizzaAPIFactory
+import by.akelian.dp.anyPizzaApp.retrofit.snacks.SnackAPIFactory
 import by.akelian.dp.anyPizzaApp.ui.menu.MenuAdapter
-import kotlinx.android.synthetic.main.fragment_pizzas_menu.*
+import kotlinx.android.synthetic.main.fragment_snacks_menu.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class PizzasFragment : Fragment() {
+class SnacksFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,22 +24,22 @@ class PizzasFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.fragment_pizzas_menu, container, false)
+        return inflater.inflate(R.layout.fragment_snacks_menu, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
         CoroutineScope(Dispatchers.IO).launch {
-            val response = PizzaAPIFactory.getRetrofitPizza().getAllPizzza().await()
+            val response = SnackAPIFactory.getRetrofitSnack().getAllSnacks().await()
             if (response.isSuccessful) {
-                val pizzas = response.body()
-                if (pizzas !== null) {
+                val snacks = response.body()
+                if (snacks !== null) {
                     withContext(Dispatchers.Main) {
 
-                        pizzasMenuRecycler.adapter = context?.applicationContext?.let {
+                        snacksMenuRecycler.adapter = context?.applicationContext?.let {
                             MenuAdapter(
-                                pizzas as ArrayList<SimilarFoodData>,
+                                snacks as ArrayList<SimilarFoodData>,
                                 R.layout.with_description_menu_item
                             )
                         }
@@ -47,6 +47,6 @@ class PizzasFragment : Fragment() {
                 }
             }
         }
-        pizzasMenuRecycler.layoutManager = LinearLayoutManager(context)
+        snacksMenuRecycler.layoutManager = LinearLayoutManager(context)
     }
 }

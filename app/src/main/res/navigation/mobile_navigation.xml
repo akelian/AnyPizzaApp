@@ -17,6 +17,7 @@
         android:name="by.akelian.dp.anyPizzaApp.ui.menu.pizzas.PizzasFragment"
         android:label="Pizza"
         tools:layout="@layout/fragment_pizzas_menu" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="by.akelian.dp.anyPizzaApp.ui.profile.ProfileFragment"

@@ -19,19 +19,19 @@
         android:layout_alignTop="@id/withoutDescriptionItemImage"
         android:layout_marginStart="24dp"
         android:layout_toEndOf="@+id/withoutDescriptionItemImage"
-        android:textSize="24sp"
+        android:textSize="20sp"
         tool:text="menu item name" />
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/withoutDescriptionItemPrice"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="24dp"
-        android:layout_toEndOf="@+id/withoutDescriptionItemImage"
-        android:layout_below="@id/withoutDescriptionItemName"
-        android:layout_marginTop="24dp"
-        android:textSize="20sp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:textSize="16sp"
         tool:text="price " />
 
 </RelativeLayout>
